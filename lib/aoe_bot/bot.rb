@@ -11,8 +11,9 @@ module AoeBot
     def initialize taunts
       Telegram::Bot::Client.run(ENV['TOKEN']) do |bot|
         bot.listen do |message|
-          if message.text.is_integer?
-            taunt = taunts[message.text.to_i - 1]
+          number = message.text.to_i - 1
+          if message.text.is_integer? and number >= 0 && number < taunts.length
+            taunt = taunts[number]
             bot.api.send_voice(
               chat_id: message.chat.id,
               voice: Faraday::UploadIO.new('storage/' + ENV['FOLDER'] + '/' + taunt, 'audio/mpeg')
