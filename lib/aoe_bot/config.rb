@@ -1,4 +1,6 @@
-#require 'YAML'
+require 'dotenv'
+Dotenv.load('.env')
+
 module AoeBot
-  #  config = YAML.load_files('config.yml')
+  print 'Token empty' if ENV['TOKEN'].nil?
 end
