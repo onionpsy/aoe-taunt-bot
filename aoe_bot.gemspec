@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["psy"]
   spec.email         = ["psych0pat@ymail.com"]
 
-  spec.summary       = ""
-  spec.description   = ""
+  spec.summary       = "AOE2 Taunt bot"
+  spec.description   = "AOE2 Taunt bot"
   spec.homepage      = ""
   spec.license       = "MIT"
 
