@@ -2,5 +2,9 @@ require 'dotenv'
 Dotenv.load('.env')
 
 module AoeBot
-  print 'Token empty' if ENV['TOKEN'].nil?
+  if ENV['TOKEN'].nil?
+    puts 'Token empty'
+    puts
+    exit
+  end
 end

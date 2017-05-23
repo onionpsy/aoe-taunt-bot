@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require 'aoe_bot'
 
-p AoeBot::run
+AoeBot::run
